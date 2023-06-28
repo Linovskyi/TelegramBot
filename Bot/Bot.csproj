@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\Dev\NET\Academy\conv\Currency-master\MyLib\MyLib.csproj" />
+    <Reference Include="MyLib">
+      <HintPath>..\MyLib\bin\Debug\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\MyLib\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

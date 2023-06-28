@@ -16,9 +16,7 @@ namespace TelegramBot
         static void Main(string[] args)
         {
 
-
-
-            String token = "APItoken";
+            String token = "Token";
             var client = new TelegramBotClient(token);
             client.StartReceiving(Update, Error);
             Console.ReadLine();
@@ -34,10 +32,10 @@ namespace TelegramBot
                 var dollars = currRates.Find(p => p.cc == "USD");
                 var euro = currRates.Find(p => p.cc == "EUR");
 
-                
+
 
                 var message = update.Message;
-                
+
                 if (message.Text != null)
                 {
                     if (message.Text.ToLower().Contains("start"))
@@ -49,7 +47,7 @@ namespace TelegramBot
                         await client.SendTextMessageAsync(message.Chat.Id, "Також можу показати всі валюти що дорожчі за 25 гривень, для цього натисни 4");
                     }
 
-                   
+
 
                     if (message.Text.ToLower().Contains("1"))
                     {
@@ -115,6 +113,7 @@ namespace TelegramBot
     }
 
 }
+
 
 
 
